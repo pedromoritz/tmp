@@ -1,28 +1,35 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Indicadores BILDS</title>
-<style>
-    body, html {
-        margin: 0;
-        padding: 0;
-        overflow: hidden;
-        height: 100%;
-    }
-    img {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
-</style>
-</head>
-<body>
-<script>
+    <style>
+       .wrapper {
+  height: 200px;
+  display: flex;
+  gap: 20px;
+}
+
+.box {
+  border: 5px solid #000;
+}
+
+.box img {
+  width: 100%;
+  height: 100%;
+}
+
+.box1 img {
+  object-fit: cover;
+}
+
+.box2 img {
+  object-fit: contain;
+}
+
+.box3 img {
+  object-fit: fill;
+}
+    </style>
+
+    <script>
     // Array de URLs das imagens
     var images = [
         "indicadores.png",
@@ -38,7 +45,7 @@
         // Atualiza o índice da imagem
         currentIndex = (currentIndex + 1) % images.length;
         // Define a imagem como fundo do corpo da página
-document.body.style.backgroundImage = "url('" + images[currentIndex] + "')";
+document.body.indicador.src = "url('" + images[currentIndex] + "')";
     }
  
     // Exibe a primeira imagem
@@ -47,5 +54,9 @@ document.body.style.backgroundImage = "url('" + images[currentIndex] + "')";
     // Define o intervalo para trocar as imagens (10 segundos = 10000 milissegundos)
     setInterval(showNextImage, 10000);
 </script>
+</head>
+<body>
+    <div class="box box2"><img id="indicador" src="indicadores.png" alt=""></div>
+
 </body>
 </html>
