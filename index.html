@@ -1,7 +1,7 @@
 <html>
 <head>
-    <style>
-       .wrapper {
+<style>
+.wrapper {
   height: 200px;
   display: flex;
   gap: 20px;
@@ -27,9 +27,27 @@
 .box3 img {
   object-fit: fill;
 }
-    </style>
+</style>
 </head>
 <body>
-    <div class="box box2"><img src="IndicadoresTV.png" alt=""></div>
+    <div class="box box2"><img id="indicador" src="" alt=""></div>
 </body>
+<script>
+  var images = [
+    "indicadores.png",
+    "IndicadoresTV.png",
+    "seg1.png"
+  ];
+ 
+  var currentIndex = 0;
+ 
+  function showNextImage() {
+    currentIndex = (currentIndex + 1) % images.length;
+    document.getElementById("indicador").src = images[currentIndex];
+  }
+ 
+  showNextImage();
+ 
+  setInterval(showNextImage, 5000);
+</script>
 </html>
