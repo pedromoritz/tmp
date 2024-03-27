@@ -28,35 +28,8 @@
   object-fit: fill;
 }
     </style>
-
-    <script>
-    // Array de URLs das imagens
-    var images = [
-        "indicadores.png",
-        "IndicadoresTV.png"
-    ];
- 
-    // Índice da imagem atual
-    var currentIndex = 0;
- 
-    // Função para exibir a próxima imagem
-    function showNextImage() {
-        // Atualiza o índice da imagem
-        currentIndex = (currentIndex + 1) % images.length;
-        // Define a imagem como fundo do corpo da página
-        //document.body.indicador.src = "url('" + images[currentIndex] + "')";
-        const elem = document.getElementById("indicador");  elem.src = images[currentIndex];
-    }
- 
-    // Exibe a primeira imagem
-    showNextImage();
- 
-    // Define o intervalo para trocar as imagens (10 segundos = 10000 milissegundos)
-    setInterval(showNextImage, 10000);
-</script>
 </head>
 <body>
-    <div class="box box2"><img id="indicador" src="IndicadoresTV.png" alt=""></div>
-
+    <div class="box box2"><img src="IndicadoresTV.png" alt=""></div>
 </body>
 </html>
