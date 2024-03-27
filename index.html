@@ -45,7 +45,8 @@
         // Atualiza o índice da imagem
         currentIndex = (currentIndex + 1) % images.length;
         // Define a imagem como fundo do corpo da página
-document.body.indicador.src = "url('" + images[currentIndex] + "')";
+        //document.body.indicador.src = "url('" + images[currentIndex] + "')";
+        const elem = document.getElementById("indicadores");  elem.src = images[currentIndex];
     }
  
     // Exibe a primeira imagem
@@ -56,7 +57,7 @@ document.body.indicador.src = "url('" + images[currentIndex] + "')";
 </script>
 </head>
 <body>
-    <div class="box box2"><img id="indicador" src="indicadores.png" alt=""></div>
+    <div class="box box2"><img id="indicador" src="" alt=""></div>
 
 </body>
 </html>
